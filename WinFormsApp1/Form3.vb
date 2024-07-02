@@ -16,8 +16,6 @@ Public Class Form3
     End Sub
 
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-
         orderedpizza = ""
         qtyordered = ""
         pizzaprice = ""
