@@ -43,9 +43,10 @@ Partial Class Form1
         ' 
         ' Ptologo
         ' 
-        Ptologo.Location = New Point(144, 12)
+        Ptologo.Location = New Point(206, 20)
+        Ptologo.Margin = New Padding(4, 5, 4, 5)
         Ptologo.Name = "Ptologo"
-        Ptologo.Size = New Size(198, 92)
+        Ptologo.Size = New Size(283, 153)
         Ptologo.TabIndex = 1
         Ptologo.TabStop = False
         ' 
@@ -53,9 +54,10 @@ Partial Class Form1
         ' 
         Lblpizzzaname.AutoSize = True
         Lblpizzzaname.ForeColor = Color.Maroon
-        Lblpizzzaname.Location = New Point(17, 24)
+        Lblpizzzaname.Location = New Point(24, 40)
+        Lblpizzzaname.Margin = New Padding(4, 0, 4, 0)
         Lblpizzzaname.Name = "Lblpizzzaname"
-        Lblpizzzaname.Size = New Size(121, 15)
+        Lblpizzzaname.Size = New Size(185, 25)
         Lblpizzzaname.TabIndex = 2
         Lblpizzzaname.Text = "Southern dream pizza"
         ' 
@@ -64,9 +66,10 @@ Partial Class Form1
         Lblwelcome.AutoSize = True
         Lblwelcome.Font = New Font("Segoe UI", 15F)
         Lblwelcome.ForeColor = Color.Maroon
-        Lblwelcome.Location = New Point(17, 64)
+        Lblwelcome.Location = New Point(24, 107)
+        Lblwelcome.Margin = New Padding(4, 0, 4, 0)
         Lblwelcome.Name = "Lblwelcome"
-        Lblwelcome.Size = New Size(93, 28)
+        Lblwelcome.Size = New Size(142, 41)
         Lblwelcome.TabIndex = 3
         Lblwelcome.Text = "Welcome"
         ' 
@@ -75,9 +78,10 @@ Partial Class Form1
         Lblname.AutoSize = True
         Lblname.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
         Lblname.ForeColor = Color.Maroon
-        Lblname.Location = New Point(216, 175)
+        Lblname.Location = New Point(309, 292)
+        Lblname.Margin = New Padding(4, 0, 4, 0)
         Lblname.Name = "Lblname"
-        Lblname.Size = New Size(40, 15)
+        Lblname.Size = New Size(62, 25)
         Lblname.TabIndex = 4
         Lblname.Text = "Name"
         ' 
@@ -86,18 +90,20 @@ Partial Class Form1
         Lblophone.AutoSize = True
         Lblophone.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
         Lblophone.ForeColor = Color.Maroon
-        Lblophone.Location = New Point(196, 219)
+        Lblophone.Location = New Point(280, 365)
+        Lblophone.Margin = New Padding(4, 0, 4, 0)
         Lblophone.Name = "Lblophone"
-        Lblophone.Size = New Size(89, 15)
+        Lblophone.Size = New Size(137, 25)
         Lblophone.TabIndex = 6
         Lblophone.Text = "phone number"
         ' 
         ' Btnpickup
         ' 
         Btnpickup.ForeColor = Color.Maroon
-        Btnpickup.Location = New Point(46, 246)
+        Btnpickup.Location = New Point(66, 410)
+        Btnpickup.Margin = New Padding(4, 5, 4, 5)
         Btnpickup.Name = "Btnpickup"
-        Btnpickup.Size = New Size(75, 42)
+        Btnpickup.Size = New Size(107, 70)
         Btnpickup.TabIndex = 8
         Btnpickup.Text = "Pick-up"
         Btnpickup.UseVisualStyleBackColor = True
@@ -105,18 +111,20 @@ Partial Class Form1
         ' Btndelivery
         ' 
         Btndelivery.ForeColor = Color.Maroon
-        Btndelivery.Location = New Point(322, 246)
+        Btndelivery.Location = New Point(460, 410)
+        Btndelivery.Margin = New Padding(4, 5, 4, 5)
         Btndelivery.Name = "Btndelivery"
-        Btndelivery.Size = New Size(75, 42)
+        Btndelivery.Size = New Size(107, 70)
         Btndelivery.TabIndex = 9
         Btndelivery.Text = "delivery +$3"
         Btndelivery.UseVisualStyleBackColor = True
         ' 
         ' Txtaddress
         ' 
-        Txtaddress.Location = New Point(17, 312)
+        Txtaddress.Location = New Point(24, 520)
+        Txtaddress.Margin = New Padding(4, 5, 4, 5)
         Txtaddress.Name = "Txtaddress"
-        Txtaddress.Size = New Size(438, 23)
+        Txtaddress.Size = New Size(624, 31)
         Txtaddress.TabIndex = 10
         Txtaddress.Visible = False
         ' 
@@ -125,9 +133,10 @@ Partial Class Form1
         Lbladress.AutoSize = True
         Lbladress.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
         Lbladress.ForeColor = Color.Maroon
-        Lbladress.Location = New Point(216, 294)
+        Lbladress.Location = New Point(309, 490)
+        Lbladress.Margin = New Padding(4, 0, 4, 0)
         Lbladress.Name = "Lbladress"
-        Lbladress.Size = New Size(51, 15)
+        Lbladress.Size = New Size(80, 25)
         Lbladress.TabIndex = 12
         Lbladress.Text = "Address"
         Lbladress.Visible = False
@@ -136,18 +145,20 @@ Partial Class Form1
         ' 
         Lblyousure.AutoSize = True
         Lblyousure.Font = New Font("Segoe UI", 25F)
-        Lblyousure.Location = New Point(119, 390)
+        Lblyousure.Location = New Point(170, 650)
+        Lblyousure.Margin = New Padding(4, 0, 4, 0)
         Lblyousure.Name = "Lblyousure"
-        Lblyousure.Size = New Size(223, 46)
+        Lblyousure.Size = New Size(327, 67)
         Lblyousure.TabIndex = 13
         Lblyousure.Text = "Are you sure?"
         Lblyousure.Visible = False
         ' 
         ' Btnyes
         ' 
-        Btnyes.Location = New Point(119, 439)
+        Btnyes.Location = New Point(170, 732)
+        Btnyes.Margin = New Padding(4, 5, 4, 5)
         Btnyes.Name = "Btnyes"
-        Btnyes.Size = New Size(75, 23)
+        Btnyes.Size = New Size(107, 38)
         Btnyes.TabIndex = 14
         Btnyes.Text = "yes"
         Btnyes.UseVisualStyleBackColor = True
@@ -155,9 +166,10 @@ Partial Class Form1
         ' 
         ' Btnno
         ' 
-        Btnno.Location = New Point(262, 439)
+        Btnno.Location = New Point(374, 732)
+        Btnno.Margin = New Padding(4, 5, 4, 5)
         Btnno.Name = "Btnno"
-        Btnno.Size = New Size(80, 26)
+        Btnno.Size = New Size(114, 43)
         Btnno.TabIndex = 15
         Btnno.Text = "No"
         Btnno.UseVisualStyleBackColor = True
@@ -165,53 +177,58 @@ Partial Class Form1
         ' 
         ' Txtname
         ' 
-        Txtname.Location = New Point(17, 193)
+        Txtname.Location = New Point(24, 322)
+        Txtname.Margin = New Padding(4, 5, 4, 5)
         Txtname.Name = "Txtname"
-        Txtname.Size = New Size(438, 23)
+        Txtname.Size = New Size(624, 31)
         Txtname.TabIndex = 5
         ' 
         ' mtbphone
         ' 
-        mtbphone.Location = New Point(185, 246)
+        mtbphone.Location = New Point(264, 410)
+        mtbphone.Margin = New Padding(4, 5, 4, 5)
         mtbphone.Mask = "(999) 000-0000"
         mtbphone.Name = "mtbphone"
-        mtbphone.Size = New Size(100, 23)
+        mtbphone.Size = New Size(141, 31)
         mtbphone.TabIndex = 16
         ' 
         ' Btnconfirm
         ' 
         Btnconfirm.Font = New Font("Segoe UI", 25F)
-        Btnconfirm.Location = New Point(144, 341)
+        Btnconfirm.Location = New Point(206, 568)
+        Btnconfirm.Margin = New Padding(4, 5, 4, 5)
         Btnconfirm.Name = "Btnconfirm"
-        Btnconfirm.Size = New Size(165, 55)
+        Btnconfirm.Size = New Size(236, 92)
         Btnconfirm.TabIndex = 17
         Btnconfirm.Text = "confirm"
         Btnconfirm.UseVisualStyleBackColor = True
         ' 
         ' Btnend
         ' 
-        Btnend.Location = New Point(430, 12)
+        Btnend.Location = New Point(614, 20)
+        Btnend.Margin = New Padding(4, 5, 4, 5)
         Btnend.Name = "Btnend"
-        Btnend.Size = New Size(20, 24)
+        Btnend.Size = New Size(29, 40)
         Btnend.TabIndex = 18
         Btnend.Text = "X"
         Btnend.UseVisualStyleBackColor = True
         ' 
         ' Btnrestart
         ' 
-        Btnrestart.Location = New Point(366, 12)
+        Btnrestart.Location = New Point(523, 20)
+        Btnrestart.Margin = New Padding(4, 5, 4, 5)
         Btnrestart.Name = "Btnrestart"
-        Btnrestart.Size = New Size(58, 24)
+        Btnrestart.Size = New Size(83, 40)
         Btnrestart.TabIndex = 19
         Btnrestart.Text = "Restart"
         Btnrestart.UseVisualStyleBackColor = True
         ' 
         ' Form1
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(49), CByte(199), CByte(242))
-        ClientSize = New Size(462, 474)
+        ClientSize = New Size(660, 790)
         Controls.Add(Btnrestart)
         Controls.Add(Btnend)
         Controls.Add(Btnconfirm)
@@ -230,6 +247,7 @@ Partial Class Form1
         Controls.Add(Lblpizzzaname)
         Controls.Add(Ptologo)
         ForeColor = Color.Maroon
+        Margin = New Padding(4, 5, 4, 5)
         Name = "Form1"
         Text = "Form1"
         CType(Ptologo, ComponentModel.ISupportInitialize).EndInit()
