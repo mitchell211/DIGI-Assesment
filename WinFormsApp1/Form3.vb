@@ -1,10 +1,12 @@
 ﻿Imports System.Net.Mail
+Imports System.Text.Json.Serialization
 
 Public Class Form3
     Dim orderedpizza As String = "" 'sets the feild as empty string
     Dim qtyordered As String = "" ' sets the feild as empty string
     Dim pizzaprice As String = "" ' sets the feild as empty string
     Dim Gtotal As Decimal ' sets the Gtotal as a decimal/value
+    Dim all As String = ""
 
     Public Sub calctotal()
         Gtotal = 0 'makes the total zero so the calculations are correct
@@ -13,12 +15,15 @@ Public Class Form3
         Next
         Gtotal += Form1.delivery 'addes the delivery to the total
         lbltotal.Text = Gtotal.ToString("C") 'setsthe total text box to the value of the ototl
+
     End Sub
 
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         orderedpizza = "" 'resets the feild as empty string
         qtyordered = "" 'resets the feild as empty string
         pizzaprice = "" 'resets the feild as empty string 
+        all = ""
         For x = 0 To 19
             If Form2.pizzaarray(x, 2) > 0 Then
                 orderedpizza = orderedpizza & Form2.pizzaarray(x, 0) & vbCrLf 'adds the names of the pizza into a text box that expands
@@ -34,8 +39,10 @@ Public Class Form3
         For x = 0 To 19
             Form2.pizzaarray(x, 3) = Val(Form2.pizzaarray(x, 1)) * Val(Form2.pizzaarray(x, 2)) 'adds the prices of everyything together and calculates the total
             calctotal()
-        Next
 
+        Next
+        all = orderedpizza + pizzaprice + qtyordered
+        My.Computer.FileSystem.WriteAllText("C:\test\test.text", all, True)
     End Sub
 
     Private Sub Btnclose_Click(sender As Object, e As EventArgs) Handles Btnclose.Click
