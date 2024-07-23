@@ -1,4 +1,6 @@
-﻿Imports System.Net.Mail
+﻿Imports System.IO
+Imports System.Net.Mail
+Imports System.Text
 Imports System.Text.Json.Serialization
 
 Public Class Form3
@@ -7,6 +9,7 @@ Public Class Form3
     Dim pizzaprice As String = "" ' sets the feild as empty string
     Dim Gtotal As Decimal ' sets the Gtotal as a decimal/value
     Dim all As String = ""
+    Dim fileReader As String
 
     Public Sub calctotal()
         Gtotal = 0 'makes the total zero so the calculations are correct
@@ -43,6 +46,9 @@ Public Class Form3
         Next
         all = orderedpizza + pizzaprice + qtyordered
         My.Computer.FileSystem.WriteAllText("C:\test\test.text", all, True)
+        fileReader = My.Computer.FileSystem.ReadAllText("C:\test\test.text")
+        MsgBox(fileReader)
+
     End Sub
 
     Private Sub Btnclose_Click(sender As Object, e As EventArgs) Handles Btnclose.Click

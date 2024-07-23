@@ -1,4 +1,7 @@
-﻿Public Class Form1
+﻿Imports System.IO
+Imports System.Text
+
+Public Class Form1
     Public customername As String = "" 'dewfines text enter as customer name 
     Public customeradress As String = "" ' defines tect entered in adress box as customer adress
     Public deliverycharge As Decimal = 3 'sets the delvery fee to three dollars
@@ -78,5 +81,18 @@
 
     Private Sub Btnrestart_Click(sender As Object, e As EventArgs) Handles Btnrestart.Click
         Application.Restart() ' if the restart bvutton is pressed it resets the application and removes everything entered 
+    End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim path As String = "c:\test\test.text"
+
+        ' Create or overwrite the file. 
+        Dim fs As FileStream = File.Create(path)
+
+        ' Add text to the file. 
+        Dim info As Byte() = New UTF8Encoding(True).GetBytes(
+                                   "")
+        fs.Write(info, 0, info.Length)
+        fs.Close()
     End Sub
 End Class
