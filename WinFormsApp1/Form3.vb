@@ -34,7 +34,7 @@ Public Class Form3
                 qtyordered = qtyordered & Form2.pizzaarray(x, 2) & vbCrLf 'adds the amount ordered into a text box that expands
             End If
         Next
-
+        pizzaprice = pizzaprice
         lblpizzas.Text = orderedpizza ' takes tthe above code and adds to text box
         lblprice.Text = pizzaprice 'takes the above code and adds to text box
         lblQty.Text = qtyordered ' takes above code and adds to text box
@@ -45,8 +45,8 @@ Public Class Form3
 
         Next
         all = orderedpizza + pizzaprice + qtyordered
-        My.Computer.FileSystem.WriteAllText("C:\test\test.text", all, True)
-        fileReader = My.Computer.FileSystem.ReadAllText("C:\test\test.text")
+        My.Computer.FileSystem.WriteAllText("c:\order summary\orders.text", all, True)
+        fileReader = My.Computer.FileSystem.ReadAllText("c:\order summary\orders.text")
         MsgBox(fileReader)
 
     End Sub
@@ -62,5 +62,9 @@ Public Class Form3
     Private Sub Btnback1_Click(sender As Object, e As EventArgs) Handles Btnback1.Click
         Form2.Show() 'when back is clicked it shows form two
         Me.Close() ' when back is clicked than this form closes
+    End Sub
+
+    Private Sub BtnContinue1_Click(sender As Object, e As EventArgs) Handles BtnContinue1.Click
+        'printing
     End Sub
 End Class

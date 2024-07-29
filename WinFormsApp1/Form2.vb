@@ -61,7 +61,7 @@
         Lblpizza11.Text = pizzaarray(10, 0) ' changes the name in the text box to the corresponding slot in the array
         Lblpizza12.Text = pizzaarray(11, 0) ' changes the name in the text box to the corresponding slot in the array
         Lblpizza13.Text = pizzaarray(12, 0) ' changes the name in the text box to the corresponding slot in the array
-        Lblpizza14.Text = pizzaarray(13, 0) '  changes the name in the text box to the corresponding slot in the array
+        Lblpizza14.Text = pizzaarray(13, 0) ' changes the name in the text box to the corresponding slot in the array
         Lblpizza15.Text = pizzaarray(14, 0) ' changes the name in the text box to the corresponding slot in the array
         lblpizza16.Text = pizzaarray(15, 0) ' changes the name in the text box to the corresponding slot in the array
         Lblpizza17.Text = pizzaarray(16, 0) ' changes the name in the text box to the corresponding slot in the array

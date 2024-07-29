@@ -50,7 +50,7 @@ Partial Class Form3
         BtnContinue1.Name = "BtnContinue1"
         BtnContinue1.Size = New Size(177, 26)
         BtnContinue1.TabIndex = 58
-        BtnContinue1.Text = "Continue"
+        BtnContinue1.Text = "print"
         BtnContinue1.UseVisualStyleBackColor = True
         ' 
         ' Btnback1
@@ -90,7 +90,7 @@ Partial Class Form3
         ' 
         ' lblQty
         ' 
-        lblQty.Location = New Point(166, 58)
+        lblQty.Location = New Point(189, 58)
         lblQty.Name = "lblQty"
         lblQty.Size = New Size(136, 334)
         lblQty.TabIndex = 76
@@ -106,7 +106,7 @@ Partial Class Form3
         ' 
         ' lblprice
         ' 
-        lblprice.Location = New Point(342, 58)
+        lblprice.Location = New Point(331, 58)
         lblprice.Name = "lblprice"
         lblprice.Size = New Size(136, 334)
         lblprice.TabIndex = 78

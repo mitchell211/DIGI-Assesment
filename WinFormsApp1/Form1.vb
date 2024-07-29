@@ -84,7 +84,7 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim path As String = "c:\test\test.text"
+        Dim path As String = "c:\order summary\orders.text"
 
         ' Create or overwrite the file. 
         Dim fs As FileStream = File.Create(path)
