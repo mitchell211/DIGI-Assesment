@@ -31,12 +31,12 @@ Public Class Form3
             Form2.pizzaarray(x, 3) = Val(Form2.pizzaarray(x, 1)) * Val(Form2.pizzaarray(x, 2))
             If Form2.pizzaarray(x, 2) > 0 Then
                 orderedpizza = orderedpizza & Form2.pizzaarray(x, 0) & vbCrLf 'adds the names of the pizza into a text box that expands
-                pizzaprice = pizzaprice & Form2.pizzaarray(x, 3) & vbCrLf 'adds the price of the pizza's into a text box that expands
+                pizzaprice = pizzaprice & Val(Form2.pizzaarray(x, 3)).ToString("C") & vbCrLf 'adds the price of the pizza's into a text box that expands
                 qtyordered = qtyordered & Form2.pizzaarray(x, 2) & vbCrLf 'adds the amount ordered into a text box that expands
             End If
         Next
         lblpizzas.Text = orderedpizza ' takes tthe above code and adds to text box
-        lblprice.Text = pizzaprice.ToString("C") 'takes the above code and adds to text box
+        lblprice.Text = pizzaprice 'takes the above code and adds to text box
         lblQty.Text = qtyordered ' takes above code and adds to text box
 
         For x = 0 To 19
@@ -45,7 +45,7 @@ Public Class Form3
             calctotal()
 
         Next
-        all = orderedpizza + pizzaprice + qtyordered
+        all = orderedpizza + pizzaprice + qtyordered & vbCrLf
         My.Computer.FileSystem.WriteAllText("c:\order summary\orders.text", all, True)
         fileReader = My.Computer.FileSystem.ReadAllText("c:\order summary\orders.text")
         MsgBox(fileReader)
@@ -66,6 +66,6 @@ Public Class Form3
     End Sub
 
     Private Sub BtnContinue1_Click(sender As Object, e As EventArgs) Handles BtnContinue1.Click
-        'printing nhpefully
+        'pri
     End Sub
 End Class
