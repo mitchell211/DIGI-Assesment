@@ -45,7 +45,16 @@ Public Class Form3
             calctotal()
 
         Next
-        all = orderedpizza + pizzaprice + qtyordered & vbCrLf
+        all = "All listed below are in order
+
+" + "Pizza
+" & orderedpizza + "
+" + "Pizza price
+" + pizzaprice + "
+" + "Amount Ordered
+" + qtyordered + " 
+" + "Delivery
+" & Form1.delivery
         My.Computer.FileSystem.WriteAllText("c:\order summary\orders.text", all, True)
         fileReader = My.Computer.FileSystem.ReadAllText("c:\order summary\orders.text")
         MsgBox(fileReader)
@@ -66,6 +75,14 @@ Public Class Form3
     End Sub
 
     Private Sub BtnContinue1_Click(sender As Object, e As EventArgs) Handles BtnContinue1.Click
-        'pri
+        '
+    End Sub
+
+    Private Sub PrintDocument1_PrintPage(sender As Object, e As Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
+
+    End Sub
+
+    Private Sub PrintPreviewDialog1_Load(sender As Object, e As EventArgs) Handles PrintPreviewDialog1.Load
+
     End Sub
 End Class

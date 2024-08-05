@@ -1,4 +1,7 @@
-﻿Public Class Form2
+﻿Imports System.IO
+Imports System.Text
+
+Public Class Form2
     Public Const REGULARPRICE As Decimal = 8.5 ' sets the regular price to $8.5
     Public Const GOURMETPREMIUM As Decimal = 5 ' sets the gourmet premium to $5
     Public Const GOURMETPRICE As Decimal = REGULARPRICE + GOURMETPREMIUM ' sets the gourmet price to the regular plus the gourmet premuim
@@ -157,6 +160,16 @@
     End Sub
 
     Private Sub BtnContinue1_Click(sender As Object, e As EventArgs) Handles BtnContinue1.Click
+        Dim path As String = "c:\order summary\orders.text"
+
+        ' Create or overwrite the file. 
+        Dim fs As FileStream = File.Create(path)
+
+        ' Add text to the file. 
+        Dim info As Byte() = New UTF8Encoding(True).GetBytes(
+                                   "")
+        fs.Write(info, 0, info.Length)
+        fs.Close()
         Form3.Show()
         Me.Hide()
     End Sub
