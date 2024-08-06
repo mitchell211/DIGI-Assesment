@@ -1,8 +1,10 @@
 ﻿Imports System.IO
 Imports System.Net.Mail
+'Imports System.Net.Mime.MediaTypeNames
+Imports System.Runtime.Intrinsics.X86
 Imports System.Text
 Imports System.Text.Json.Serialization
-
+Imports System.Drawing.Printing
 Public Class Form3
     Dim orderedpizza As String = "" 'sets the feild as empty string
     Dim qtyordered As String = "" ' sets the feild as empty string
@@ -67,6 +69,8 @@ Public Class Form3
 
     Private Sub Btnrestart_Click(sender As Object, e As EventArgs) Handles Btnrestart.Click
         Application.Restart() ' when restart button is clicked then it goes back to the first form and everything is reset
+      
+
     End Sub
 
     Private Sub Btnback1_Click(sender As Object, e As EventArgs) Handles Btnback1.Click
@@ -75,12 +79,33 @@ Public Class Form3
     End Sub
 
     Private Sub BtnContinue1_Click(sender As Object, e As EventArgs) Handles BtnContinue1.Click
-        '
+        'This handles print preview and has the advantage of being able to  
+
+        'print as well. However, it still needs the code above to generate the layout.  
+
+        PrintPreviewDialog1.Document = PrintDocument1
+
+        PrintPreviewDialog1.ShowDialog()
     End Sub
 
-    Private Sub PrintDocument1_PrintPage(sender As Object, e As Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
+    Private Sub PrintDocumentl_PrintPage(sender As Object, e As Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
+        'these lines are the important ones, they print the actual required info"
+       Dim font1 As New Font("arial", 16, FontStyle.Regular) 'define the printing style  
+
+
+        e.Graphics.DrawString(lbltotal.Text, font1, Brushes.Black, 100, 175)
+
+
+        e.Graphics.DrawString(lbltotal.Text, font1, Brushes.Black, 106, 175) 'should be fairly easy to work out the different parts,
+
+        e.Graphics.DrawString(lbltotal.Text, font1, Brushes.Black, 250, 175)
+        e.Graphics.DrawString(lbltotal.Text, font1, Brushes.Black, 350, 175)
+        e.Graphics.DrawString(lbltotal.Text, font1, Brushes.Black, 450, 175)
+        e.Graphics.DrawString(lbltotal.Text, font1, Brushes.Black, 100, 175)
+
 
     End Sub
+
 
     Private Sub PrintPreviewDialog1_Load(sender As Object, e As EventArgs) Handles PrintPreviewDialog1.Load
 
