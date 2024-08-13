@@ -69,7 +69,7 @@ Public Class Form3
 
     Private Sub Btnrestart_Click(sender As Object, e As EventArgs) Handles Btnrestart.Click
         Application.Restart() ' when restart button is clicked then it goes back to the first form and everything is reset
-      
+
 
     End Sub
 
@@ -90,20 +90,20 @@ Public Class Form3
 
     Private Sub PrintDocumentl_PrintPage(sender As Object, e As Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
         'these lines are the important ones, they print the actual required info"
-       Dim font1 As New Font("arial", 16, FontStyle.Regular) 'define the printing style  
+        Dim font1 As New Font("arial", 16, FontStyle.Regular) 'define the printing style  
+        Dim font2 As New Font("times new roman", 18, FontStyle.Regular)
 
 
-        e.Graphics.DrawString(lbltotal.Text, font1, Brushes.Black, 100, 175)
-
-
-        e.Graphics.DrawString(lbltotal.Text, font1, Brushes.Black, 106, 175) 'should be fairly easy to work out the different parts,
-
-        e.Graphics.DrawString(lbltotal.Text, font1, Brushes.Black, 250, 175)
-        e.Graphics.DrawString(lbltotal.Text, font1, Brushes.Black, 350, 175)
-        e.Graphics.DrawString(lbltotal.Text, font1, Brushes.Black, 450, 175)
-        e.Graphics.DrawString(lbltotal.Text, font1, Brushes.Black, 100, 175)
-
-
+        If Form1.delivery > 0 Then
+            e.Graphics.DrawString(Form1.Txtaddress.Text, font1, Brushes.Black, 100, 100)
+        End If
+        'across, down
+        e.Graphics.DrawString(lblpizzas.Text, font1, Brushes.Black, 100, 175)
+        e.Graphics.DrawString(Label1.Text, font2, Brushes.Cornsilk, 325, 25) 'should be fairly easy to work out the different parts,
+        e.Graphics.DrawString(lblprice.Text, font1, Brushes.Black, 350, 175)
+        e.Graphics.DrawString(lblQty.Text, font1, Brushes.Black, 450, 175)
+        e.Graphics.DrawString(Form1.Txtname.Text, font1, Brushes.Black, 100, 60)
+        e.Graphics.DrawString(Form1.mtbphone.Text, font1, Brushes.Black, 100, 80)
     End Sub
 
 
