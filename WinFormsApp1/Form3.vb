@@ -7,7 +7,7 @@ Imports System.Text.Json.Serialization
 Imports System.Drawing.Printing
 Public Class Form3
     Dim orderedpizza As String = "" 'sets the feild as empty string
-    Dim qtyordered As String = "" ' sets the feild as empty string
+    Public qtyordered As String = "" ' sets the feild as empty string
     Dim pizzaprice As String = ""  ' sets the feild as empty string
     Dim Gtotal As Decimal ' sets the Gtotal as a decimal/value
     Dim all As String = ""
@@ -99,7 +99,7 @@ Public Class Form3
         End If
         'across, down
         e.Graphics.DrawString(lblpizzas.Text, font1, Brushes.Black, 100, 175)
-        e.Graphics.DrawString(Label1.Text, font2, Brushes.Cornsilk, 325, 25) 'should be fairly easy to work out the different parts,
+        '   e.Graphics.DrawString(Label1.Text, font2, Brushes.Red, 325, 25) 'should be fairly easy to work out the different parts,
         e.Graphics.DrawString(lblprice.Text, font1, Brushes.Black, 350, 175)
         e.Graphics.DrawString(lblQty.Text, font1, Brushes.Black, 450, 175)
         e.Graphics.DrawString(Form1.Txtname.Text, font1, Brushes.Black, 100, 60)

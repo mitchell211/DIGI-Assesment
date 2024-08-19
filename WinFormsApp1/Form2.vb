@@ -1,4 +1,5 @@
-﻿Imports System.IO
+﻿Imports System.Diagnostics.Eventing.Reader
+Imports System.IO
 Imports System.Text
 
 Public Class Form2
@@ -160,6 +161,13 @@ Public Class Form2
     End Sub
 
     Private Sub BtnContinue1_Click(sender As Object, e As EventArgs) Handles BtnContinue1.Click
+
+        For x = 0 To 19
+            If Form3.qtyordered < 1 Then 'this but with pizzas here so make qty here instead of form 3
+                MsgBox("help")
+            End If
+        Next
+
         Dim path As String = "c:\order summary\orders.text"
 
         ' Create or overwrite the file. 
@@ -170,7 +178,5 @@ Public Class Form2
                                    "")
         fs.Write(info, 0, info.Length)
         fs.Close()
-        Form3.Show()
-        Me.Hide()
     End Sub
 End Class
