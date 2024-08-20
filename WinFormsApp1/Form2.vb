@@ -7,6 +7,7 @@ Public Class Form2
     Public Const GOURMETPREMIUM As Decimal = 5 ' sets the gourmet premium to $5
     Public Const GOURMETPRICE As Decimal = REGULARPRICE + GOURMETPREMIUM ' sets the gourmet price to the regular plus the gourmet premuim
     Public pizzaarray(19, 3) As String ' creates an array for the name,price,the number of pizzas and totals 
+    Public TotalPizza As Integer
 
     Private Sub Btnback1_Click(sender As Object, e As EventArgs) Handles Btnback1.Click
         Form1.Show() ' if the back button is clicked it brings up form one with all the details still entered
@@ -161,13 +162,15 @@ Public Class Form2
     End Sub
 
     Private Sub BtnContinue1_Click(sender As Object, e As EventArgs) Handles BtnContinue1.Click
-
         For x = 0 To 19
-            If Form3.qtyordered < 1 Then 'this but with pizzas here so make qty here instead of form 3
-                MsgBox("help")
-            End If
+            TotalPizza = TotalPizza + pizzaarray(x, 2)
         Next
-
+        If TotalPizza < 1 Then
+            MsgBox("Please select a pizza")
+        Else
+            Form3.Show()
+            Me.Hide()
+        End If
         Dim path As String = "c:\order summary\orders.text"
 
         ' Create or overwrite the file. 

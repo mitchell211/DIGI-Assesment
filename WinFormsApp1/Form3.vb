@@ -34,7 +34,7 @@ Public Class Form3
             If Form2.pizzaarray(x, 2) > 0 Then
                 orderedpizza = orderedpizza & Form2.pizzaarray(x, 0) & vbCrLf 'adds the names of the pizza into a text box that expands
                 pizzaprice = pizzaprice & Val(Form2.pizzaarray(x, 3)).ToString("C") & vbCrLf 'adds the price of the pizza's into a text box that expands
-                qtyordered = qtyordered & Form2.pizzaarray(x, 2) & vbCrLf 'adds the amount ordered into a text box that expands
+                qtyordered = orderedpizza & Form2.pizzaarray(x, 2) & vbCrLf 'adds the amount ordered into a text box that expands
             End If
         Next
         lblpizzas.Text = orderedpizza ' takes tthe above code and adds to text box
@@ -69,8 +69,6 @@ Public Class Form3
 
     Private Sub Btnrestart_Click(sender As Object, e As EventArgs) Handles Btnrestart.Click
         Application.Restart() ' when restart button is clicked then it goes back to the first form and everything is reset
-
-
     End Sub
 
     Private Sub Btnback1_Click(sender As Object, e As EventArgs) Handles Btnback1.Click
@@ -99,13 +97,16 @@ Public Class Form3
         End If
         'across, down
         e.Graphics.DrawString(lblpizzas.Text, font1, Brushes.Black, 100, 175)
-        '   e.Graphics.DrawString(Label1.Text, font2, Brushes.Red, 325, 25) 'should be fairly easy to work out the different parts,
+        e.Graphics.DrawString(Label1.Text, font2, Brushes.Red, 325, 25) 'should be fairly easy to work out the different parts,
         e.Graphics.DrawString(lblprice.Text, font1, Brushes.Black, 350, 175)
         e.Graphics.DrawString(lblQty.Text, font1, Brushes.Black, 450, 175)
         e.Graphics.DrawString(Form1.Txtname.Text, font1, Brushes.Black, 100, 60)
         e.Graphics.DrawString(Form1.mtbphone.Text, font1, Brushes.Black, 100, 80)
     End Sub
 
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+        MsgBox("easter egg")
+    End Sub
 
     Private Sub PrintPreviewDialog1_Load(sender As Object, e As EventArgs) Handles PrintPreviewDialog1.Load
 

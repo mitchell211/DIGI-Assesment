@@ -36,13 +36,14 @@ Partial Class Form3
         PrintDialog1 = New PrintDialog()
         PrintDocument1 = New Printing.PrintDocument()
         PrintPreviewDialog1 = New PrintPreviewDialog()
+        Label2 = New Label()
         SuspendLayout()
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Segoe UI", 20F)
-        Label1.Location = New Point(154, 21)
+        Label1.Location = New Point(152, 2)
         Label1.Name = "Label1"
         Label1.Size = New Size(203, 37)
         Label1.TabIndex = 0
@@ -86,7 +87,7 @@ Partial Class Form3
         ' 
         ' lblpizzas
         ' 
-        lblpizzas.Location = New Point(24, 58)
+        lblpizzas.Location = New Point(12, 89)
         lblpizzas.Name = "lblpizzas"
         lblpizzas.Size = New Size(136, 334)
         lblpizzas.TabIndex = 75
@@ -94,7 +95,7 @@ Partial Class Form3
         ' 
         ' lblQty
         ' 
-        lblQty.Location = New Point(189, 58)
+        lblQty.Location = New Point(189, 89)
         lblQty.Name = "lblQty"
         lblQty.Size = New Size(136, 334)
         lblQty.TabIndex = 76
@@ -110,7 +111,7 @@ Partial Class Form3
         ' 
         ' lblprice
         ' 
-        lblprice.Location = New Point(331, 58)
+        lblprice.Location = New Point(331, 89)
         lblprice.Name = "lblprice"
         lblprice.Size = New Size(136, 334)
         lblprice.TabIndex = 78
@@ -143,12 +144,21 @@ Partial Class Form3
         PrintPreviewDialog1.Name = "PrintPreviewDialog1"
         PrintPreviewDialog1.Visible = False
         ' 
+        ' Label2
+        ' 
+        Label2.Font = New Font("Segoe UI", 9F)
+        Label2.Location = New Point(361, 9)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(30, 16)
+        Label2.TabIndex = 80
+        ' 
         ' Form3
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(49), CByte(199), CByte(242))
         ClientSize = New Size(490, 476)
+        Controls.Add(Label2)
         Controls.Add(lbltotal)
         Controls.Add(lblprice)
         Controls.Add(Label5)
@@ -188,4 +198,5 @@ Partial Class Form3
     Friend WithEvents PrintDialog1 As PrintDialog
     Friend WithEvents PrintDocument1 As Printing.PrintDocument
     Friend WithEvents PrintPreviewDialog1 As PrintPreviewDialog
+    Friend WithEvents Label2 As Label
 End Class
