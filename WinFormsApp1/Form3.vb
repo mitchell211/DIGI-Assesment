@@ -24,6 +24,17 @@ Public Class Form3
     End Sub
 
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If Form1.delivery > 0 Then
+            lblcusaddress.Show()
+            lblcusaddress.Text = Form1.customeradress
+            Lbladdress.Show()
+        Else
+            lblcusaddress.Hide()
+            Lbladdress.Hide()
+        End If
+
+        lblcusname.Text = Form1.customername
+        Lblcusphone.Text = Form1.phonenumber
 
         orderedpizza = "" 'resets the feild as empty string
         qtyordered = "" 'resets the feild as empty string
@@ -34,7 +45,7 @@ Public Class Form3
             If Form2.pizzaarray(x, 2) > 0 Then
                 orderedpizza = orderedpizza & Form2.pizzaarray(x, 0) & vbCrLf 'adds the names of the pizza into a text box that expands
                 pizzaprice = pizzaprice & Val(Form2.pizzaarray(x, 3)).ToString("C") & vbCrLf 'adds the price of the pizza's into a text box that expands
-                qtyordered = orderedpizza & Form2.pizzaarray(x, 2) & vbCrLf 'adds the amount ordered into a text box that expands
+                qtyordered = qtyordered & Form2.pizzaarray(x, 2) & vbCrLf 'adds the amount ordered into a text box that expands
             End If
         Next
         lblpizzas.Text = orderedpizza ' takes tthe above code and adds to text box
@@ -104,11 +115,12 @@ Public Class Form3
         e.Graphics.DrawString(Form1.mtbphone.Text, font1, Brushes.Black, 100, 80)
     End Sub
 
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
-        MsgBox("easter egg")
-    End Sub
 
     Private Sub PrintPreviewDialog1_Load(sender As Object, e As EventArgs) Handles PrintPreviewDialog1.Load
+
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
 
     End Sub
 End Class

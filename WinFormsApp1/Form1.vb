@@ -6,7 +6,7 @@ Public Class Form1
     Public customeradress As String = "" ' defines tect entered in adress box as customer adress
     Public deliverycharge As Decimal = 3 'sets the delvery fee to three dollars
     Public delivery As Decimal = 0 ' sets delivery to zero to have a separte system to pick up and delivery
-    Dim phonenumber As String = "" ' defines numbers entered in the phone box as text
+    Public phonenumber As String = "" ' defines numbers entered in the phone box as text
     Private Sub Btndelivery_Click(sender As Object, e As EventArgs) Handles Btndelivery.Click
         'shows adress box
         delivery = deliverycharge 'sets the deivery to three dollars 

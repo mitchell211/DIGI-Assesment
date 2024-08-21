@@ -37,13 +37,19 @@ Partial Class Form3
         PrintDocument1 = New Printing.PrintDocument()
         PrintPreviewDialog1 = New PrintPreviewDialog()
         Label2 = New Label()
+        lblphone = New Label()
+        lblname = New Label()
+        Lbladdress = New Label()
+        lblcusname = New Label()
+        lblcusaddress = New Label()
+        Lblcusphone = New Label()
         SuspendLayout()
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Segoe UI", 20F)
-        Label1.Location = New Point(152, 2)
+        Label1.Location = New Point(152, 6)
         Label1.Name = "Label1"
         Label1.Size = New Size(203, 37)
         Label1.TabIndex = 0
@@ -152,12 +158,78 @@ Partial Class Form3
         Label2.Size = New Size(30, 16)
         Label2.TabIndex = 80
         ' 
+        ' lblphone
+        ' 
+        lblphone.AutoSize = True
+        lblphone.Location = New Point(1, 45)
+        lblphone.Name = "lblphone"
+        lblphone.Size = New Size(91, 15)
+        lblphone.TabIndex = 81
+        lblphone.Text = "Phone Number:"
+        ' 
+        ' lblname
+        ' 
+        lblname.AutoSize = True
+        lblname.Location = New Point(1, 3)
+        lblname.Name = "lblname"
+        lblname.Size = New Size(42, 15)
+        lblname.TabIndex = 82
+        lblname.Text = "Name:"
+        ' 
+        ' Lbladdress
+        ' 
+        Lbladdress.AutoSize = True
+        Lbladdress.Location = New Point(1, 24)
+        Lbladdress.Name = "Lbladdress"
+        Lbladdress.Size = New Size(52, 15)
+        Lbladdress.TabIndex = 83
+        Lbladdress.Text = "Address:"
+        ' 
+        ' lblcusname
+        ' 
+        lblcusname.AutoSize = True
+        lblcusname.BackColor = Color.Transparent
+        lblcusname.Font = New Font("Segoe UI", 7F)
+        lblcusname.Location = New Point(43, 3)
+        lblcusname.Name = "lblcusname"
+        lblcusname.Size = New Size(33, 12)
+        lblcusname.TabIndex = 84
+        lblcusname.Text = "Label3"
+        ' 
+        ' lblcusaddress
+        ' 
+        lblcusaddress.AutoSize = True
+        lblcusaddress.BackColor = Color.Transparent
+        lblcusaddress.Font = New Font("Segoe UI", 7F)
+        lblcusaddress.Location = New Point(59, 24)
+        lblcusaddress.Name = "lblcusaddress"
+        lblcusaddress.Size = New Size(33, 12)
+        lblcusaddress.TabIndex = 85
+        lblcusaddress.Text = "Label4"
+        ' 
+        ' Lblcusphone
+        ' 
+        Lblcusphone.AutoSize = True
+        Lblcusphone.BackColor = Color.Transparent
+        Lblcusphone.Font = New Font("Segoe UI", 7F)
+        Lblcusphone.Location = New Point(98, 45)
+        Lblcusphone.Name = "Lblcusphone"
+        Lblcusphone.Size = New Size(33, 12)
+        Lblcusphone.TabIndex = 86
+        Lblcusphone.Text = "Label7"
+        ' 
         ' Form3
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(49), CByte(199), CByte(242))
         ClientSize = New Size(490, 476)
+        Controls.Add(Lblcusphone)
+        Controls.Add(lblcusaddress)
+        Controls.Add(lblcusname)
+        Controls.Add(Lbladdress)
+        Controls.Add(lblname)
+        Controls.Add(lblphone)
         Controls.Add(Label2)
         Controls.Add(lbltotal)
         Controls.Add(lblprice)
@@ -199,4 +271,10 @@ Partial Class Form3
     Friend WithEvents PrintDocument1 As Printing.PrintDocument
     Friend WithEvents PrintPreviewDialog1 As PrintPreviewDialog
     Friend WithEvents Label2 As Label
+    Friend WithEvents lblphone As Label
+    Friend WithEvents lblname As Label
+    Friend WithEvents Lbladdress As Label
+    Friend WithEvents lblcusname As Label
+    Friend WithEvents lblcusaddress As Label
+    Friend WithEvents Lblcusphone As Label
 End Class
