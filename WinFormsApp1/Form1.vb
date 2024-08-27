@@ -2,8 +2,8 @@
 Imports System.Text
 
 Public Class Form1
-    Public customername As String = "" 'dewfines text enter as customer name 
-    Public customeradress As String = "" ' defines tect entered in adress box as customer adress
+    Public customerName As String = "" 'dewfines text enter as customer name 
+    Public customerAddress As String = "" ' defines tect entered in adress box as customer adress
     Public deliverycharge As Decimal = 3 'sets the delvery fee to three dollars
     Public delivery As Decimal = 0 ' sets delivery to zero to have a separte system to pick up and delivery
     Public phonenumber As String = "" ' defines numbers entered in the phone box as text
@@ -15,9 +15,9 @@ Public Class Form1
     End Sub
 
     Private Sub Btnconfirm_Click(sender As Object, e As EventArgs) Handles Btnconfirm.Click
-        customername = Txtname.Text.Trim ' sets the customers name to a trimmed text removng spaces
+        customerName = Txtname.Text.Trim ' sets the customers name to a trimmed text removng spaces
         phonenumber = mtbphone.Text.Trim 'removes leading spaces in the phone number
-        customeradress = Txtaddress.Text.Trim 'sets the customers adress as a trimed text removing spaces
+        customerAddress = Txtaddress.Text.Trim 'sets the customers adress as a trimed text removing spaces
         phonenumber = phonenumber.Remove(0, 1) 'removes first bracket from the masked text box
         phonenumber = phonenumber.Remove(3, 1) 'remves a bracket from the masked text box
         phonenumber = phonenumber.Remove(3, 1) ' removes one of the dsashes from the masked text box
@@ -55,7 +55,7 @@ Public Class Form1
         ElseIf phonenumber = 0 Then
             MessageBox.Show("please enter valid phone number") ' if nothing is entered ibnto the phone number text box this will be displayed
 
-        ElseIf customeradress = "" Then
+        ElseIf customerAddress = "" Then
             MessageBox.Show("please enter address") ' if nothing is entered into the address text boxt his is displayed
         Else
             Lblyousure.Show() 'shows label asking if customer is sure that their details are correct
@@ -84,7 +84,7 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim path As String = "c:\order summary\orders.text"
+        Dim path As String = "C:\ordersummary\orders.text"
 
         ' Create or overwrite the file. 
         Dim fs As FileStream = File.Create(path)

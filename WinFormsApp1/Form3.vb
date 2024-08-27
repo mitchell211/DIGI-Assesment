@@ -26,7 +26,7 @@ Public Class Form3
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If Form1.delivery > 0 Then
             lblcusaddress.Show()
-            lblcusaddress.Text = Form1.customeradress
+            lblcusaddress.Text = Form1.customerAddress
             Lbladdress.Show()
         Else
             lblcusaddress.Hide()
