@@ -10,17 +10,18 @@ Public Class Form2
     Public TotalPizza As Integer
 
     Private Sub Btnback1_Click(sender As Object, e As EventArgs) Handles Btnback1.Click
-        Form1.Show() ' if the back button is clicked it brings up form one with all the details still entered
-        Me.Hide() ' hides this form to show form one
+        Form1.Show() ' If the back button is clicked it brings up form one with all the details still entered
+        Me.Hide() ' Hides this form to show form one
     End Sub
 
     Private Sub Btnrestart_Click(sender As Object, e As EventArgs) Handles Btnrestart.Click
-        Application.Restart() ' if the restart button is clicked it restarts the application to form one with nothing entered
+        Application.Restart() ' If the restart button is clicked it restarts the application to form one with nothing entered.
 
     End Sub
 
     Private Sub Btnclose_Click(sender As Object, e As EventArgs) Handles Btnclose.Click
-        End ' if the X button is clicked than the application ends and has to be reopened
+        End
+        ' If the X button is clicked than the application ends and has to be reopened.
     End Sub
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
