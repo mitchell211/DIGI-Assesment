@@ -3,7 +3,7 @@ Imports System.Runtime.CompilerServices
 Imports System.Text
 
 Public Class Form1
-    Public dir_name As String = "C:\ordersummary\orders.text"
+    Public dir_name As String = "C:\ordersummary\"
     Public customerName As String = "" 'dewfines text enter as customer name 
     Public customerAddress As String = "" ' defines tect entered in adress box as customer adress
     Public deliverycharge As Decimal = 3 'sets the delvery fee to three dollars

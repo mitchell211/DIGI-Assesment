@@ -109,7 +109,7 @@ Public Class Form2
             Form3.Show()
             Me.Hide()
         End If
-        Dim path As String = "c:\order summary\orders.text"
+        Dim path As String = "c:\ordersummary\orders.text"
 
         ' Create or overwrite the file. 
         Dim fs As FileStream = File.Create(path)

@@ -68,8 +68,8 @@ Public Class Form3
 " + qtyordered + " 
 " + "Delivery
 " & Form1.delivery
-        My.Computer.FileSystem.WriteAllText("c:\order summary\orders.text", all, True)
-        fileReader = My.Computer.FileSystem.ReadAllText("c:\order summary\orders.text")
+        My.Computer.FileSystem.WriteAllText("c:\ordersummary\orders.text", all, True)
+        fileReader = My.Computer.FileSystem.ReadAllText("c:\ordersummary\orders.text")
         MsgBox(fileReader)
 
     End Sub
