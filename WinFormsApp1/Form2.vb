@@ -25,63 +25,106 @@ Public Class Form2
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'stores the name of the regular pizza's
-        pizzaarray(0, 0) = "Cheese Pizza" ' sets the name of the first pizza to chesse pizza in the array
-        pizzaarray(1, 0) = "hawaiian pizza" 'sets the name of the second pizza to hawaiian pizza in the array
-        pizzaarray(2, 0) = "pepperoni pizza" 'sets the name fo the third pizza to pepperoni pizza in the array
-        pizzaarray(3, 0) = "meat lovers pizza" ' sets the fourth pizza to meat lovers pizza in the array
-        pizzaarray(4, 0) = "cheesy garlic pizza" ' sets the fifth pizza to chessy garlic pizza in the array 
-        pizzaarray(5, 0) = "veggie pizza" ' sets the sixth pizza to veggie pizza in the array
-        pizzaarray(6, 0) = "the Godfather" ' sets the seventh pizza to the godfahter in the array
-        pizzaarray(7, 0) = "butter chicken" ' sets the eighth pizza to butter chicken in the array
-        pizzaarray(8, 0) = "mr wedge" ' sets the ninth pizza to mr wedge in they array
-        pizzaarray(9, 0) = "spicy pepper" 'sets the tenth pizza to spicy pepper in the array 
+        pizzaarray(0, 0) = "Cheese Pizza"
+        ' Sets the name of the first pizza to chesse pizza in the array.
+        pizzaarray(1, 0) = "hawaiian pizza"
+        ' Sets the name of the second pizza to hawaiian pizza in the array.
+        pizzaarray(2, 0) = "pepperoni pizza"
+        ' Sets the name fo the third pizza to pepperoni pizza in the array.
+        pizzaarray(3, 0) = "meat lovers pizza"
+        ' Sets the fourth pizza to meat lovers pizza in the array.
+        pizzaarray(4, 0) = "cheesy garlic pizza"
+        ' Sets the fifth pizza to chessy garlic pizza in the array. 
+        pizzaarray(5, 0) = "veggie pizza"
+        ' Sets the sixth pizza to veggie pizza in the array.
+        pizzaarray(6, 0) = "the Godfather"
+        ' Sets the seventh pizza to the godfahter in the array.
+        pizzaarray(7, 0) = "butter chicken"
+        ' Sets the eighth pizza to butter chicken in the array.
+        pizzaarray(8, 0) = "mr wedge"
+        ' Sets the ninth pizza to mr wedge in they array.
+        pizzaarray(9, 0) = "spicy pepper"
+        'Sets the tenth pizza to spicy pepper in the array. 
 
-        Lblpizza1.Text = pizzaarray(0, 0) ' changes the name in the text box to the corresponding slot in the array
-        lblpizza2.Text = pizzaarray(1, 0) ' changes the name in the text box to the corresponding slot in the array
-        lblpizza3.Text = pizzaarray(2, 0) ' changes the name in the text box to the corresponding slot in the array
-        lblpizza4.Text = pizzaarray(3, 0) ' changes the name in the text box to the corresponding slot in the array
-        Lblpizza5.Text = pizzaarray(4, 0) ' changes the name in the text box to the corresponding slot in the array
-        Lblpizza6.Text = pizzaarray(5, 0) ' changes the name in the text box to the corresponding slot in the array
-        Lblpizza7.Text = pizzaarray(6, 0) ' changes the name in the text box to the corresponding slot in the array
-        Lblpizza8.Text = pizzaarray(7, 0) ' changes the name in the text box to the corresponding slot in the array
-        Lblpizza9.Text = pizzaarray(8, 0) ' changes the name in the text box to the corresponding slot in the array
-        Lblpizza10.Text = pizzaarray(9, 0) ' changes the name in the text box to the corresponding slot in the array
+        Lblpizza1.Text = pizzaarray(0, 0)
+        ' Changes the name in the text box to the corresponding slot in the array.
+        lblpizza2.Text = pizzaarray(1, 0)
+        ' Changes the name in the text box to the corresponding slot in the array.
+        lblpizza3.Text = pizzaarray(2, 0)
+        ' Changes the name in the text box to the corresponding slot in the array.
+        lblpizza4.Text = pizzaarray(3, 0)
+        ' Changes the name in the text box to the corresponding slot in the array.
+        Lblpizza5.Text = pizzaarray(4, 0)
+        ' Changes the name in the text box to the corresponding slot in the array.
+        Lblpizza6.Text = pizzaarray(5, 0)
+        ' Changes the name in the text box to the corresponding slot in the array.
+        Lblpizza7.Text = pizzaarray(6, 0)
+        ' Changes the name in the text box to the corresponding slot in the array.
+        Lblpizza8.Text = pizzaarray(7, 0)
+        ' Changes the name in the text box to the corresponding slot in the array.
+        Lblpizza9.Text = pizzaarray(8, 0)
+        ' Changes the name in the text box to the corresponding slot in the array.
+        Lblpizza10.Text = pizzaarray(9, 0)
+        ' Changes the name in the text box to the corresponding slot in the array.
 
         For x = 0 To 9
-            pizzaarray(x, 1) = REGULARPRICE ' sets the price for regular pizzads in the correct slot in the array
+            pizzaarray(x, 1) = REGULARPRICE
+            ' Sets the price for regular pizzas in the correct slot in the array.
         Next
-        Lblprice.Text = Val(pizzaarray(0, 1)).ToString("C") 'sets the price label to the price in the corresponding slot in the array
+        Lblprice.Text = Val(pizzaarray(0, 1)).ToString("C")
+        ' Sets the price label to the price in the corresponding slot in the array.
 
-        pizzaarray(10, 0) = "GREEK LAMB TZATZIKI" ' sets the eleventh pizza to greek lamb tzarziki in the array
-        pizzaarray(11, 0) = "LAMB MEATLOVERS" ' sets the twelevth pizza to lamb meatlovers in the arrray
-        pizzaarray(12, 0) = "CHICKEN DELUXE" ' sets the thirtenth pizza to chicken deluxe in the array 
-        pizzaarray(13, 0) = "BBQ PORK BELLY" ' sets the fourtenth pizza to bbq pork belly 
-        pizzaarray(14, 0) = "THE LOT" ' sets the fifthtenth pizza to the lot 
-        pizzaarray(15, 0) = "BUFFALO CHICKEN" ' sets the sixthenth pizza to buffalo chicken
-        pizzaarray(16, 0) = "PERI-PERI CHICKEN" ' sets the seventhenth pizza to peri peri chicken in the array
-        pizzaarray(17, 0) = "GARLIC PRAWN" 'sets the eightenth pizza to garlic prawn in the array
-        pizzaarray(18, 0) = "APRICOT CHICKEN" ' sets the ninetenth pizza to apricot chicken in the array
-        pizzaarray(19, 0) = "MEGA MEATLOVERS" ' sets the twenteth pizza to mega meatlovers in to array
+        pizzaarray(10, 0) = "GREEK LAMB TZATZIKI"
+        ' Sets the eleventh pizza to greek lamb tzarziki in the array.
+        pizzaarray(11, 0) = "LAMB MEATLOVERS"
+        ' Sets the twelevth pizza to lamb meatlovers in the arrray.
+        pizzaarray(12, 0) = "CHICKEN DELUXE"
+        ' Sets the thirtenth pizza to chicken deluxe in the array.
+        pizzaarray(13, 0) = "BBQ PORK BELLY"
+        ' Sets the fourtenth pizza to bbq pork belly.
+        pizzaarray(14, 0) = "THE LOT"
+        ' Sets the fifthtenth pizza to the lot.
+        pizzaarray(15, 0) = "BUFFALO CHICKEN"
+        ' Sets the sixthenth pizza to buffalo chicken.
+        pizzaarray(16, 0) = "PERI-PERI CHICKEN"
+        ' Sets the seventhenth pizza to peri peri chicken in the array.
+        pizzaarray(17, 0) = "GARLIC PRAWN"
+        'Sets the eightenth pizza to garlic prawn in the array.
+        pizzaarray(18, 0) = "APRICOT CHICKEN"
+        ' Sets the ninetenth pizza to apricot chicken in the array.
+        pizzaarray(19, 0) = "MEGA MEATLOVERS"
+        ' Sets the twenteth pizza to mega meatlovers in to array.
 
-        Lblpizza11.Text = pizzaarray(10, 0) ' changes the name in the text box to the corresponding slot in the array
-        Lblpizza12.Text = pizzaarray(11, 0) ' changes the name in the text box to the corresponding slot in the array
-        Lblpizza13.Text = pizzaarray(12, 0) ' changes the name in the text box to the corresponding slot in the array
-        Lblpizza14.Text = pizzaarray(13, 0) ' changes the name in the text box to the corresponding slot in the array
-        Lblpizza15.Text = pizzaarray(14, 0) ' changes the name in the text box to the corresponding slot in the array
-        lblpizza16.Text = pizzaarray(15, 0) ' changes the name in the text box to the corresponding slot in the array
-        Lblpizza17.Text = pizzaarray(16, 0) ' changes the name in the text box to the corresponding slot in the array
-        Lblpizza18.Text = pizzaarray(17, 0) ' changes the name in the text box to the corresponding slot in the array
-        Lblpizza19.Text = pizzaarray(18, 0) ' changes the name in the text box to the corresponding slot in the array
-        Lblpizza20.Text = pizzaarray(19, 0) ' changes the name in the text box to the corresponding slot in the array
+        Lblpizza11.Text = pizzaarray(10, 0)
+        ' Changes the name in the text box to the corresponding slot in the array.
+        Lblpizza12.Text = pizzaarray(11, 0)
+        ' Changes the name in the text box to the corresponding slot in the array.
+        Lblpizza13.Text = pizzaarray(12, 0)
+        ' Changes the name in the text box to the corresponding slot in the array.
+        Lblpizza14.Text = pizzaarray(13, 0)
+        ' Changes the name in the text box to the corresponding slot in the array.
+        Lblpizza15.Text = pizzaarray(14, 0)
+        ' Changes the name in the text box to the corresponding slot in the array.
+        lblpizza16.Text = pizzaarray(15, 0)
+        ' Changes the name in the text box to the corresponding slot in the array.
+        Lblpizza17.Text = pizzaarray(16, 0)
+        ' Changes the name in the text box to the corresponding slot in the array.
+        Lblpizza18.Text = pizzaarray(17, 0)
+        ' Changes the name in the text box to the corresponding slot in the array.
+        Lblpizza19.Text = pizzaarray(18, 0)
+        ' Changes the name in the text box to the corresponding slot in the array.
+        Lblpizza20.Text = pizzaarray(19, 0)
+        ' Changes the name in the text box to the corresponding slot in the array.
 
         For x = 10 To 19
-            pizzaarray(x, 1) = GOURMETPRICE ' sets the gourmet price to the corresponding spot in the array
+            pizzaarray(x, 1) = GOURMETPRICE
+            ' Sets the gourmet price to the corresponding spot in the array.
         Next
         Lblgourmetprice.Text = Val(pizzaarray(10, 1)).ToString("C")
 
     End Sub
 
-    ' Define a single event handler
+    ' Define a single event handler.
     Private Sub PizzaComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles _
     Cbopizza0.SelectedIndexChanged, Cbopizza1.SelectedIndexChanged, Cbopizza2.SelectedIndexChanged,
     Cbopizza3.SelectedIndexChanged, Cbopizza4.SelectedIndexChanged, Cbopizza5.SelectedIndexChanged,
@@ -92,7 +135,8 @@ Public Class Form2
     Cbopizza19.SelectedIndexChanged, Cbopizza20.SelectedIndexChanged
 
         Dim cb As ComboBox = CType(sender, ComboBox)
-        Dim index As Integer = Convert.ToInt32(cb.Name.Substring(8)) ' Extract index from ComboBox name
+        Dim index As Integer = Convert.ToInt32(cb.Name.Substring(8))
+        ' Extract index from ComboBox name.
 
         If index < pizzaarray.GetLength(0) Then
             pizzaarray(index, 2) = cb.Text
