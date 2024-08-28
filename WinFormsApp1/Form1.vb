@@ -1,12 +1,15 @@
 ﻿Imports System.IO
+Imports System.Runtime.CompilerServices
 Imports System.Text
 
 Public Class Form1
+    Public dir_name As String = "C:\ordersummary\orders.text"
     Public customerName As String = "" 'dewfines text enter as customer name 
     Public customerAddress As String = "" ' defines tect entered in adress box as customer adress
     Public deliverycharge As Decimal = 3 'sets the delvery fee to three dollars
     Public delivery As Decimal = 0 ' sets delivery to zero to have a separte system to pick up and delivery
     Public phonenumber As String = "" ' defines numbers entered in the phone box as text
+
     Private Sub Btndelivery_Click(sender As Object, e As EventArgs) Handles Btndelivery.Click
         'shows adress box
         delivery = deliverycharge 'sets the deivery to three dollars 
@@ -50,7 +53,7 @@ Public Class Form1
     End Sub
 
     Public Sub fordelivery() ' if the delivery charge is more then zero codes is rederiv=cted to this sub
-        If customername = "" Then
+        If customerName = "" Then
             MessageBox.Show("please enter name") 'if nothing is entered into the name text this will be displayed
         ElseIf phonenumber = 0 Then
             MessageBox.Show("please enter valid phone number") ' if nothing is entered ibnto the phone number text box this will be displayed
@@ -64,7 +67,7 @@ Public Class Form1
         End If
     End Sub
     Public Sub forcollection() ' if delivery is sero than code is redirected to this sub
-        If customername = "" Then
+        If customerName = "" Then
             MessageBox.Show("please enter name") 'if nothing is entered into the customer name text box this is displayed
         ElseIf phonenumber = 0 Then
             MessageBox.Show("please enter valid phone number") ' if nothing is entered into the phone number text box than this is displayed
@@ -84,6 +87,11 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        If Not System.IO.Directory.Exists(dir_name) Then
+            System.IO.Directory.CreateDirectory(dir_name)
+        End If
+
         Dim path As String = "C:\ordersummary\orders.text"
 
         ' Create or overwrite the file. 
