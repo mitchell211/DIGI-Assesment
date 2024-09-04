@@ -67,11 +67,13 @@ Public Class Form3
 " + "Amount Ordered
 " + qtyordered + " 
 " + "Delivery
-" & Form1.delivery
+" & Form1.delivery & "
+"
         My.Computer.FileSystem.WriteAllText("c:\ordersummary\orders.text", all, True)
         fileReader = My.Computer.FileSystem.ReadAllText("c:\ordersummary\orders.text")
         MsgBox(fileReader)
 
+        My.Computer.FileSystem.WriteAllText("c:\grandsummary\grandsum.text", all, True)
     End Sub
 
     Private Sub Btnclose_Click(sender As Object, e As EventArgs) Handles Btnclose.Click
@@ -122,5 +124,18 @@ Public Class Form3
 
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
 
+    End Sub
+
+    Private Sub btngrandreset_Click(sender As Object, e As EventArgs) Handles btngrandreset.Click
+        Dim path1 As String = "C:\grandsummary\grandsum.text"
+
+        ' Create or overwrite the file. 
+        Dim fs1 As FileStream = File.Create(path1)
+
+        ' Add text to the file. 
+        Dim info As Byte() = New UTF8Encoding(True).GetBytes(
+                                  "")
+        fs1.Write(info, 0, info.Length)
+        fs1.Close()
     End Sub
 End Class

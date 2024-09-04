@@ -43,6 +43,7 @@ Partial Class Form3
         lblcusname = New Label()
         lblcusaddress = New Label()
         Lblcusphone = New Label()
+        btngrandreset = New Button()
         SuspendLayout()
         ' 
         ' Label1
@@ -218,12 +219,22 @@ Partial Class Form3
         Lblcusphone.TabIndex = 86
         Lblcusphone.Text = "Label7"
         ' 
+        ' btngrandreset
+        ' 
+        btngrandreset.Location = New Point(352, 28)
+        btngrandreset.Name = "btngrandreset"
+        btngrandreset.Size = New Size(135, 29)
+        btngrandreset.TabIndex = 87
+        btngrandreset.Text = "Reset grand summary"
+        btngrandreset.UseVisualStyleBackColor = True
+        ' 
         ' Form3
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(49), CByte(199), CByte(242))
         ClientSize = New Size(490, 476)
+        Controls.Add(btngrandreset)
         Controls.Add(Lblcusphone)
         Controls.Add(lblcusaddress)
         Controls.Add(lblcusname)
@@ -277,4 +288,5 @@ Partial Class Form3
     Friend WithEvents lblcusname As Label
     Friend WithEvents lblcusaddress As Label
     Friend WithEvents Lblcusphone As Label
+    Friend WithEvents btngrandreset As Button
 End Class

@@ -64,7 +64,7 @@ Partial Class Form1
         Lblwelcome.AutoSize = True
         Lblwelcome.Font = New Font("Segoe UI", 15F)
         Lblwelcome.ForeColor = Color.Maroon
-        Lblwelcome.Location = New Point(17, 64)
+        Lblwelcome.Location = New Point(28, 39)
         Lblwelcome.Name = "Lblwelcome"
         Lblwelcome.Size = New Size(93, 28)
         Lblwelcome.TabIndex = 3

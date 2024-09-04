@@ -3,19 +3,26 @@ Imports System.IO
 Imports System.Text
 
 Public Class Form2
-    Public Const REGULARPRICE As Decimal = 8.5 ' sets the regular price to $8.5
-    Public Const GOURMETPREMIUM As Decimal = 5 ' sets the gourmet premium to $5
-    Public Const GOURMETPRICE As Decimal = REGULARPRICE + GOURMETPREMIUM ' sets the gourmet price to the regular plus the gourmet premuim
-    Public pizzaarray(19, 3) As String ' creates an array for the name,price,the number of pizzas and totals 
+    Public Const REGULARPRICE As Decimal = 8.5
+    ' Sets the regular price to $8.5.
+    Public Const GOURMETPREMIUM As Decimal = 5
+    ' Sets the gourmet premium to $5.
+    Public Const GOURMETPRICE As Decimal = REGULARPRICE + GOURMETPREMIUM
+    ' Sets the gourmet price to the regular plus the gourmet premuim.
+    Public pizzaarray(19, 3) As String
+    ' Creates an array for the name,price,the number of pizzas and totals.
     Public TotalPizza As Integer
 
     Private Sub Btnback1_Click(sender As Object, e As EventArgs) Handles Btnback1.Click
-        Form1.Show() ' If the back button is clicked it brings up form one with all the details still entered
-        Me.Hide() ' Hides this form to show form one
+        Form1.Show()
+        ' If the back button is clicked it brings up form one with all the details still entered.
+        Me.Hide()
+        ' Hides this form to show form one.
     End Sub
 
     Private Sub Btnrestart_Click(sender As Object, e As EventArgs) Handles Btnrestart.Click
-        Application.Restart() ' If the restart button is clicked it restarts the application to form one with nothing entered.
+        Application.Restart()
+        ' If the restart button is clicked it restarts the application to form one with nothing entered.
 
     End Sub
 
