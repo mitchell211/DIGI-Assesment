@@ -101,24 +101,32 @@ Public Class Form1
             ' Shows button to hide these last two.
         End If
     End Sub
-    Public Sub forcollection() ' if delivery is sero than code is redirected to this sub
+    Public Sub forcollection()
+        ' If delivery is zero than code is redirected to this sub.
         If customerName = "" Then
-            MessageBox.Show("please enter name") 'if nothing is entered into the customer name text box this is displayed
+            MessageBox.Show("please enter name")
+            ' If nothing is entered into the customer name text box this is displayed
         ElseIf phonenumber = 0 Then
-            MessageBox.Show("please enter valid phone number") ' if nothing is entered into the phone number text box than this is displayed
+            MessageBox.Show("please enter valid phone number")
+            ' If nothing is entered into the phone number text box than this is displayed.
         Else
-            Lblyousure.Show() 'shows label asking if the customer is sure that their details are correct
-            Btnyes.Show() 'shows the button to move to the next form
-            Btnno.Show() ' hshows the button that hides the other two
+            Lblyousure.Show()
+            ' Shows label asking if the customer is sure that their details are correct.
+            Btnyes.Show()
+            ' Shows the button to move to the next form.
+            Btnno.Show()
+            ' Shows the button that hides the other two.
         End If
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Btnend.Click
-        End ' if the X button is clicked than the application ends and has to be reopened
+        End
+        ' If the X button is clicked than the application ends and has to be reopened.
     End Sub
 
     Private Sub Btnrestart_Click(sender As Object, e As EventArgs) Handles Btnrestart.Click
-        Application.Restart() ' if the restart bvutton is pressed it resets the application and removes everything entered 
+        Application.Restart()
+        ' If the restart bvutton is pressed it resets the application and removes everything entered. 
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load

@@ -1,25 +1,32 @@
 ﻿Imports System.IO
 Imports System.Net.Mail
-'Imports System.Net.Mime.MediaTypeNames
 Imports System.Runtime.Intrinsics.X86
 Imports System.Text
 Imports System.Text.Json.Serialization
 Imports System.Drawing.Printing
 Public Class Form3
-    Dim orderedpizza As String = "" 'sets the feild as empty string
-    Public qtyordered As String = "" ' sets the feild as empty string
-    Dim pizzaprice As String = ""  ' sets the feild as empty string
-    Dim Gtotal As Decimal ' sets the Gtotal as a decimal/value
+    Dim orderedpizza As String = ""
+    ' Sets the feild as empty string.
+    Public qtyordered As String = ""
+    ' sets the feild as empty string.
+    Dim pizzaprice As String = ""
+    ' Sets the feild as empty string.
+    Dim Gtotal As Decimal
+    ' Sets the Gtotal as a decimal/value.
     Dim all As String = ""
     Dim fileReader As String
 
     Public Sub calctotal()
-        Gtotal = 0 'makes the total zero so the calculations are correct
+        Gtotal = 0
+        ' Makes the total zero so the calculations are correct.
         For x = 0 To 19
-            Gtotal = Gtotal + Val(Form2.pizzaarray(x, 3)) 'takes the value of the calculated forms 
+            Gtotal = Gtotal + Val(Form2.pizzaarray(x, 3))
+            ' Takes the value of the calculated forms
         Next
-        Gtotal += Form1.delivery 'addes the delivery to the total
-        lbltotal.Text = Gtotal.ToString("C") 'setsthe total text box to the value of the ototl
+        Gtotal += Form1.delivery
+        ' Adds the delivery to the total.
+        lbltotal.Text = Gtotal.ToString("C")
+        ' sets the total text box to the value of the total.
 
     End Sub
 
@@ -36,25 +43,35 @@ Public Class Form3
         lblcusname.Text = Form1.customername
         Lblcusphone.Text = Form1.phonenumber
 
-        orderedpizza = "" 'resets the feild as empty string
-        qtyordered = "" 'resets the feild as empty string
-        pizzaprice = "" 'resets the feild as empty string 
+        orderedpizza = ""
+        ' Resets the feild as empty string.
+        qtyordered = ""
+        ' Resets the feild as empty string.
+        pizzaprice = ""
+        ' Resets the feild as empty string.
         all = ""
         For x = 0 To 19
             Form2.pizzaarray(x, 3) = Val(Form2.pizzaarray(x, 1)) * Val(Form2.pizzaarray(x, 2))
             If Form2.pizzaarray(x, 2) > 0 Then
-                orderedpizza = orderedpizza & Form2.pizzaarray(x, 0) & vbCrLf 'adds the names of the pizza into a text box that expands
-                pizzaprice = pizzaprice & Val(Form2.pizzaarray(x, 3)).ToString("C") & vbCrLf 'adds the price of the pizza's into a text box that expands
-                qtyordered = qtyordered & Form2.pizzaarray(x, 2) & vbCrLf 'adds the amount ordered into a text box that expands
+                orderedpizza = orderedpizza & Form2.pizzaarray(x, 0) & vbCrLf
+                ' Adds the names of the pizza into a text box that expands.
+                pizzaprice = pizzaprice & Val(Form2.pizzaarray(x, 3)).ToString("C") & vbCrLf
+                ' Adds the price of the pizza's into a text box that expands.
+                qtyordered = qtyordered & Form2.pizzaarray(x, 2) & vbCrLf
+                ' Adds the amount ordered into a text box that expands.
             End If
         Next
-        lblpizzas.Text = orderedpizza ' takes tthe above code and adds to text box
-        lblprice.Text = pizzaprice 'takes the above code and adds to text box
-        lblQty.Text = qtyordered ' takes above code and adds to text box
+        lblpizzas.Text = orderedpizza
+        ' Takes tthe above code and adds to text box.
+        lblprice.Text = pizzaprice
+        ' Takes the above code and adds to text box.
+        lblQty.Text = qtyordered
+        ' Takes above code and adds to text box.
 
         For x = 0 To 19
 
-            Form2.pizzaarray(x, 3) = Val(Form2.pizzaarray(x, 1)) * Val(Form2.pizzaarray(x, 2)) 'adds the prices of everyything together and calculates the total
+            Form2.pizzaarray(x, 3) = Val(Form2.pizzaarray(x, 1)) * Val(Form2.pizzaarray(x, 2))
+            ' Adds the prices of everyything together and calculates the total.
             calctotal()
 
         Next
@@ -77,22 +94,26 @@ Public Class Form3
     End Sub
 
     Private Sub Btnclose_Click(sender As Object, e As EventArgs) Handles Btnclose.Click
-        End ' when X button pressed then applacation ends and has to be reopened
+        End
+        ' When X button pressed then applacation ends and has to be reopened.
     End Sub
 
     Private Sub Btnrestart_Click(sender As Object, e As EventArgs) Handles Btnrestart.Click
-        Application.Restart() ' when restart button is clicked then it goes back to the first form and everything is reset
+        Application.Restart()
+        ' When restart button is clicked then it goes back to the first form and everything is reset.
     End Sub
 
     Private Sub Btnback1_Click(sender As Object, e As EventArgs) Handles Btnback1.Click
-        Form2.Show() 'when back is clicked it shows form two
-        Me.Close() ' when back is clicked than this form closes
+        Form2.Show()
+        ' When back is clicked it shows form two.
+        Me.Close()
+        ' When back is clicked than this form closes.
     End Sub
 
     Private Sub BtnContinue1_Click(sender As Object, e As EventArgs) Handles BtnContinue1.Click
-        'This handles print preview and has the advantage of being able to  
+        ' This handles print preview and has the advantage of being able to.
 
-        'print as well. However, it still needs the code above to generate the layout.  
+        ' Print as well. However, it still needs the code above to generate the layout.  
 
         PrintPreviewDialog1.Document = PrintDocument1
 
@@ -100,8 +121,9 @@ Public Class Form3
     End Sub
 
     Private Sub PrintDocumentl_PrintPage(sender As Object, e As Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
-        'these lines are the important ones, they print the actual required info"
-        Dim font1 As New Font("arial", 16, FontStyle.Regular) 'define the printing style  
+        ' These lines are the important ones, they print the actual required info.
+        Dim font1 As New Font("arial", 16, FontStyle.Regular)
+        ' define the printing style.  
         Dim font2 As New Font("times new roman", 18, FontStyle.Regular)
 
 
@@ -110,20 +132,11 @@ Public Class Form3
         End If
         'across, down
         e.Graphics.DrawString(lblpizzas.Text, font1, Brushes.Black, 100, 175)
-        e.Graphics.DrawString(Label1.Text, font2, Brushes.Red, 325, 25) 'should be fairly easy to work out the different parts,
+        e.Graphics.DrawString(Label1.Text, font2, Brushes.Red, 325, 25)
         e.Graphics.DrawString(lblprice.Text, font1, Brushes.Black, 350, 175)
         e.Graphics.DrawString(lblQty.Text, font1, Brushes.Black, 450, 175)
         e.Graphics.DrawString(Form1.Txtname.Text, font1, Brushes.Black, 100, 60)
         e.Graphics.DrawString(Form1.mtbphone.Text, font1, Brushes.Black, 100, 80)
-    End Sub
-
-
-    Private Sub PrintPreviewDialog1_Load(sender As Object, e As EventArgs) Handles PrintPreviewDialog1.Load
-
-    End Sub
-
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-
     End Sub
 
     Private Sub btngrandreset_Click(sender As Object, e As EventArgs) Handles btngrandreset.Click
